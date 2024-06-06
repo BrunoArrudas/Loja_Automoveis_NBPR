@@ -19,4 +19,8 @@ informacao VARCHAR(50),
 email VARCHAR(50),
 telefone VARCHAR(50)
 
+
+
+
+
 );
