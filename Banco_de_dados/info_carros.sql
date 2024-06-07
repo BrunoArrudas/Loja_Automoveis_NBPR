@@ -20,7 +20,4 @@ email VARCHAR(50),
 telefone VARCHAR(50)
 
 
-
-
-
 );
