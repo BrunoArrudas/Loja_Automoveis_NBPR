@@ -3,80 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sobre Nós</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Estilos para o cabeçalho */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        header img {
+            height: 100px;
+            width: 150px;
+        }
+
+        .barra {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        header nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos para a seção principal */
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .about {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about h1, .about h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .about p, .about ul {
+            margin-bottom: 20px;
+        }
+
+        .about ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        /* Estilos para o rodapé */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
 </head>
-<style>
-    body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-img {
-    height: 100px;
-    width: 150px;
-}
- 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-}
- 
-header h1 {
-    margin: 0;
-}
- 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
- 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
- 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.barra {
-    margin-left: 500px;
-}
- 
-#destaque {
-    padding: 20px;
-}
- 
-.carro {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 20px;
-}
- 
-.carro img {
-    max-width: 100%;
-    height: auto;
-}
- 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-</style>
 <body>
-
     <header>
-        <a href="index.html"><img src="imagem/LogoOficial.png" alt="">                   </a>
-
+        <a href="index.html"><img src="imagem/LogoOficial.png" alt="Logo"></a>
         <div class="barra">
             <nav>
                 <ul>
@@ -84,23 +112,27 @@ footer {
                     <li><a href="#">Carros</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                     <li><a href="#">Contato</a></li>
-                    <li><a href="cadastro.html">Cadastro</li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-    <h1>Somos uma empresa apaixonada por carros, comprometida em oferecer aos nossos clientes uma 
-        experiência excepcional. Com uma ampla seleção de veículos novos</h1>
-
-        <h2>Por que Escolher a NBPR?
-            Compromisso com a Qualidade: Priorizamos a qualidade em tudo o que fazemos.
-            Atendimento ao Cliente Excepcional: Nosso objetivo é superar as expectativas dos nossos clientes, oferecendo um atendimento personalizado e amigável em todos os momentos.
-            Transparência e Integridade: Valorizamos a transparência e a honestidade em todas as nossas transações, garantindo que você tenha uma experiência de compra tranquila e sem surpresas desagradáveis.
-
-            Junte-se a Nós:
-            Venha fazer parte da empresa "Automoveis_NBPR" e descubra uma nova maneira de comprar, manter e desfrutar do seu carro. Estamos ansiosos para atendê-lo!
-        </h2>
-
+    <main>
+        <section class="about">
+            <h1>A Empresa</h1>
+            <p>Somos uma empresa apaixonada por carros, comprometida em oferecer aos nossos clientes uma experiência excepcional. Com uma ampla seleção de veículos novos.</p>
+            <h2>Por que Escolher a NBPR?</h2>
+            <ul>
+                <li>Compromisso com a Qualidade: Priorizamos a qualidade em tudo o que fazemos.</li>
+                <li>Atendimento ao Cliente Excepcional: Nosso objetivo é superar as expectativas dos nossos clientes, oferecendo um atendimento personalizado e amigável em todos os momentos.</li>
+                <li>Transparência e Integridade: Valorizamos a transparência e a honestidade em todas as nossas transações, garantindo que você tenha uma experiência de compra tranquila e sem surpresas desagradáveis.</li>
+            </ul>
+            <h2>Junte-se a Nós:</h2>
+            <p>Venha fazer parte da empresa "Automoveis_NBPR" e descubra uma nova maneira de comprar, manter e desfrutar do seu carro. Estamos ansiosos para atendê-lo!</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Automoveis_NBPR. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
