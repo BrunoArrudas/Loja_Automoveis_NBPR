@@ -1,43 +1,20 @@
 <?php
 
 class Database {
+    private static $instance = null;
 
- public static $instance = null;
- public $conexao;
- public $host = 'localhost';
- public $db = "loja_nbpr";
- public $usuario = 'root';
- public $password = '';
+    public static function getInstance() {
+        if(self::$instance === null) {
+            $host = 'localhost';
+            $dbname = 'loja_nbpr';
+            $username = 'root';
+            $password = '';
 
- public function __construct()
- {
-    try {
-        $this->conexao = new PDO("mysql:host=$this->host; dbname=$this->db", $this->usuario, $this->password);
-        $this->conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }catch(PDOException $e){
-        echo 'Connection failed: '. $e->getMessage();
+            self::$instance = new PDO("mysql:host=$host;dbname=$dbname", $username , $password);
+            self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        }
+        return self::$instance;
     }
- }
-
- public static function getInstance()
- {
-     if (!self::$instance) {
-         self::$instance = new Database();
-     }
-     return self::$instance;
- }
-
- public function getConnection() {
-     return $this->conexao;
- }
-
 }
-
-
-
-
-
-
-
 
 ?>
