@@ -8,7 +8,7 @@ class CarrosDAO {
 
     public function __construct()
     {
-        $this->db = Database::getInstance()->getConnection();
+        $this->db = Database::getInstance();
     }
 
     public function getById($id) {
@@ -21,21 +21,21 @@ class CarrosDAO {
 
             $carro = $stmt->fetch(PDO::FETCH_ASSOC);
             return $carro ? new Carros($id['id'],
-                                       $imagem_carro['imagem_carro'],
-                                       $modelo_carro['modelo_carro'],
-                                       $ano['ano'],
-                                       $cidade['cidade'],
-                                       $kilometragem['kilometragem'],
-                                       $motorizacao['motorizacao'],
-                                       $cambio['cambio'],
-                                       $carroceria['carroceria'],
-                                       $combustivel['combustivel'],
-                                       $cor['cor'],
-                                       $descricao_opcionais['descricao_opcionais'],
-                                       $informacao['informacao'],
-                                       $email['email'],
-                                       $telefone['telefone'])
-            } catch (PDOException $e){
+                                       $carro['imagem_carro'],
+                                       $carro['modelo_carro'],
+                                       $carro['ano'],
+                                       $carro['cidade'],
+                                       $carro['kilometragem'],
+                                       $carro['motorizacao'],
+                                       $carro['cambio'],
+                                       $carro['carroceria'],
+                                       $carro['combustivel'],
+                                       $carro['cor'],
+                                       $carro['descricao_opcionais'],
+                                       $carro['informacao'],
+                                       $carro['email'],
+                                       $carro['telefone']) : null;
+         } catch (PDOException $e){
             return null;
          }
     }
@@ -48,21 +48,21 @@ class CarrosDAO {
             $carro = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             return array_map(function($carro){
-                return new Carros($id['id'],
-                $imagem_carro['imagem_carro'],
-                $modelo_carro['modelo_carro'],
-                $ano['ano'],
-                $cidade['cidade'],
-                $kilometragem['kilometragem'],
-                $motorizacao['motorizacao'],
-                $cambio['cambio'],
-                $carroceria['carroceria'],
-                $combustivel['combustivel'],
-                $cor['cor'],
-                $descricao_opcionais['descricao_opcionais'],
-                $informacao['informacao'],
-                $email['email'],
-                $telefone['telefone']);
+                return new Carros($carro['id'],
+                $carro['imagem_carro'],
+                $carro['modelo_carro'],
+                $carro['ano'],
+                $carro['cidade'],
+                $carro['kilometragem'],
+                $carro['motorizacao'],
+                $carro['cambio'],
+                $carro['carroceria'],
+                $carro['combustivel'],
+                $carro['cor'],
+                $carro['descricao_opcionais'],
+                $carro['informacao'],
+                $carro['email'],
+                $carro['telefone']);
             }, $carro);
 
         }catch (PDOException $e){
