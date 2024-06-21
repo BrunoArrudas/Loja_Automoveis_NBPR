@@ -20,7 +20,7 @@ class CarrosDAO {
             $stmt->execute();
 
             $carro = $stmt->fetch(PDO::FETCH_ASSOC);
-            return $carro ? new Carros($id['id'],
+            return $carro ? new Carros($carro['id'],
                                        $carro['imagem_carro'],
                                        $carro['modelo_carro'],
                                        $carro['ano'],
@@ -39,6 +39,7 @@ class CarrosDAO {
             return null;
          }
     }
+
 
     public function getAll(){
         try{
@@ -74,11 +75,11 @@ class CarrosDAO {
     public function create($carro){
         try{
             $sql = "INSERT INTO info_carros(imagem_carro,modelo_carro,ano,cidade,kilometragem,motorizacao,cambio,carroceria,combustivel,cor,descricao_opcionais,informacao,email,telefone)
-                    VALUES (:id,:imagem_carro,:modelo_carro,:ano,:cidade,:kilometragem,:motorizacao,:cambio,:carroceria,:combustivel,:cor,:descricao_opcionais,:informacao,:email,:telefone) ";
+                    VALUES (:imagem_carro,:modelo_carro,:ano,:cidade,:kilometragem,:motorizacao,:cambio,:carroceria,:combustivel,:cor,:descricao_opcionais,:informacao,:email,:telefone) ";
             $stmt = $this->db->prepare($sql);
             
             $imagem_carro = $carro->getImagem();
-            $modelo_carro = $carro->getModeloCarro();
+            $modelo_carro = $carro->getModelo();
             $ano = $carro->getAno();
             $cidade = $carro->getCidade();
             $kilometragem = $carro->getKilometragem();

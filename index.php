@@ -13,7 +13,7 @@ $carros = $carrosDAO->getAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carros a venda em nosso site</title>
+    <title>Carros à venda em nosso site</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -33,11 +33,13 @@ $carros = $carrosDAO->getAll();
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                     <ul class="navbar-nav ml-auto">
-                
-                                    <input type="hidden" name="type" value="logout">
-                                    <button class="btn btn-link nav-link" type="submit" style="display: inline; border: none; background: none; padding: 0; cursor: pointer;">Logout</button>
-                                </form>
-                            </li>
+                        <!-- Item de Logout corrigido -->
+                        <li class="nav-item">
+                            <form method="post" action="logout.php">
+                                <input type="hidden" name="type" value="logout">
+                                <button class="btn btn-link nav-link" type="submit" style="display: inline; border: none; background: none; padding: 0; cursor: pointer;">Logout</button>
+                            </form>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -45,29 +47,29 @@ $carros = $carrosDAO->getAll();
     </header>
 
     <div class="container">
-        <h1 class="my-4">Automoveis</h1>
-        <a href="registroCarros.php" class="btn btn-primary mb-4">Quero cadastrar meu automovel</a>
+        <h1 class="my-4">Automóveis</h1>
+        <a href="registroCarro.php" class="btn btn-primary mb-4">Quero cadastrar meu automóvel</a>
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            <?php foreach ($carros as $carros) : ?>
+            <?php foreach ($carros as $carro) : ?>
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title"><?php echo htmlspecialchars($carros->getImagem(), ENT_QUOTES, 'UTF-8'); ?></h5>
-                            <p class="card-text"><?php echo htmlspecialchars($carros->getModelo(), ENT_QUOTES, 'UTF-8'); ?></p>
-                            <p class="card-text"><?php echo htmlspecialchars($carros->getAno(), ENT_QUOTES, 'UTF-8'); ?></p>
-                            <p class="card-text"><?php echo htmlspecialchars($carros->getCidade(), ENT_QUOTES, 'UTF-8'); ?></p>
-                            <p class="card-text"><?php echo htmlspecialchars($carros->getKilometragem(), ENT_QUOTES, 'UTF-8'); ?></p>
-                            <p class="card-text"><?php echo htmlspecialchars($carros->getMotorizacao(), ENT_QUOTES, 'UTF-8'); ?></p>
-                            <p class="card-text"><?php echo htmlspecialchars($carros->getCambio(), ENT_QUOTES, 'UTF-8'); ?></p>
-                            <p class="card-text"><?php echo htmlspecialchars($carros->getCarroceria(), ENT_QUOTES, 'UTF-8'); ?></p>
-                            <p class="card-text"><?php echo htmlspecialchars($carros->getCombustivel(), ENT_QUOTES, 'UTF-8'); ?></p>
-                            <p class="card-text"><?php echo htmlspecialchars($carros->getCor(), ENT_QUOTES, 'UTF-8'); ?></p>
-                            <p class="card-text"><?php echo htmlspecialchars($carros->getDescricao(), ENT_QUOTES, 'UTF-8'); ?></p>
-                            <p class="card-text"><?php echo htmlspecialchars($carros->getInformacao(), ENT_QUOTES, 'UTF-8'); ?></p>
-                            <p class="card-text"><?php echo htmlspecialchars($carros->getEmail(), ENT_QUOTES, 'UTF-8'); ?></p>
-                            <p class="card-text"><?php echo htmlspecialchars($carros->getTelefone(), ENT_QUOTES, 'UTF-8'); ?></p>
+                            <h5 class="card-title"><?php echo htmlspecialchars($carro->getImagem(), ENT_QUOTES, 'UTF-8'); ?></h5>
+                            <p class="card-text"><?php echo htmlspecialchars($carro->getModelo(), ENT_QUOTES, 'UTF-8'); ?></p>
+                            <p class="card-text"><?php echo htmlspecialchars($carro->getAno(), ENT_QUOTES, 'UTF-8'); ?></p>
+                            <p class="card-text"><?php echo htmlspecialchars($carro->getCidade(), ENT_QUOTES, 'UTF-8'); ?></p>
+                            <p class="card-text"><?php echo htmlspecialchars($carro->getKilometragem(), ENT_QUOTES, 'UTF-8'); ?></p>
+                            <p class="card-text"><?php echo htmlspecialchars($carro->getMotorizacao(), ENT_QUOTES, 'UTF-8'); ?></p>
+                            <p class="card-text"><?php echo htmlspecialchars($carro->getCambio(), ENT_QUOTES, 'UTF-8'); ?></p>
+                            <p class="card-text"><?php echo htmlspecialchars($carro->getCarroceria(), ENT_QUOTES, 'UTF-8'); ?></p>
+                            <p class="card-text"><?php echo htmlspecialchars($carro->getCombustivel(), ENT_QUOTES, 'UTF-8'); ?></p>
+                            <p class="card-text"><?php echo htmlspecialchars($carro->getCor(), ENT_QUOTES, 'UTF-8'); ?></p>
+                            <p class="card-text"><?php echo htmlspecialchars($carro->getDescricao(), ENT_QUOTES, 'UTF-8'); ?></p>
+                            <p class="card-text"><?php echo htmlspecialchars($carro->getInformacao(), ENT_QUOTES, 'UTF-8'); ?></p>
+                            <p class="card-text"><?php echo htmlspecialchars($carro->getEmail(), ENT_QUOTES, 'UTF-8'); ?></p>
+                            <p class="card-text"><?php echo htmlspecialchars($carro->getTelefone(), ENT_QUOTES, 'UTF-8'); ?></p>
 
-                            <a href="registroCarro.php?id=<?php echo $carros->getId(); ?>" class="btn btn-primary">Detalhes</a>
+                            <a href="registroCarro.php?id=<?php echo $carro->getId(); ?>" class="btn btn-primary">Detalhes</a>
                         </div>
                     </div>
                 </div>
