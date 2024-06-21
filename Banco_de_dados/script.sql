@@ -1,10 +1,8 @@
-
 CREATE DATABASE loja_nbpr;
 
 USE loja_nbpr;
 
 CREATE TABLE IF NOT EXISTS info_carros (
-    
 id INT AUTO_INCREMENT PRIMARY KEY,
 imagem_carro VARCHAR(20),
 modelo_carro VARCHAR(20),

@@ -98,9 +98,7 @@ class Carros
         return $this->telefone;
     }
 
-    //public function setId($id){
-        //$this->id = $id;
-    //}
+    ////////////////////////////////////////////////////////////////////////////////
 
     public function setImagem($imagem_carro){
         $this->imagem_carro = $imagem_carro;
