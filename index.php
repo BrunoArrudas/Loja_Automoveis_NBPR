@@ -3,6 +3,7 @@
 include_once 'config/Database.php';
 include_once 'entity/cadastroCarros.php';
 include_once 'dao/cadastroCarroDAO.php';
+include_once 'footer.html';
 
 $carrosDAO = new CarrosDAO();
 $carros = $carrosDAO->getAll();
@@ -13,7 +14,7 @@ $carros = $carrosDAO->getAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carros à venda em nosso site</title>
+    <title>Loja de automóveis NBPR</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -69,7 +70,7 @@ $carros = $carrosDAO->getAll();
                             <p class="card-text"><?php echo htmlspecialchars($carro->getEmail(), ENT_QUOTES, 'UTF-8'); ?></p>
                             <p class="card-text"><?php echo htmlspecialchars($carro->getTelefone(), ENT_QUOTES, 'UTF-8'); ?></p>
 
-                            <a href="registroCarro.php?id=<?php echo $carro->getId(); ?>" class="btn btn-primary">Detalhes</a>
+                            <a href="detalhesCarros.php?id=<?php echo $carro->getId(); ?>" class="btn btn-primary">Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -79,3 +80,5 @@ $carros = $carrosDAO->getAll();
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
