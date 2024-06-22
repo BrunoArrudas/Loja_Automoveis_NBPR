@@ -9,6 +9,144 @@ $carrosDAO = new CarrosDAO();
 $carros = $carrosDAO->getAll();
 ?>
 
+<style>
+        /* Estilos adicionais para a página principal */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+ 
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+ 
+        header img {
+            height: 100px;
+            width: 150px;
+        }
+ 
+        .barra {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+ 
+        header nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+ 
+        header nav ul li {
+            margin-right: 20px;
+        }
+ 
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+ 
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+ 
+        /* Estilos para a seção de destaque */
+        #destaque {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+ 
+        .carro {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            width: 250px;
+        }
+ 
+        .carro img {
+            width: 100%;
+            border-radius: 5px;
+        }
+ 
+        /* Responsividade */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+            }
+ 
+            header img {
+                height: 80px;
+                width: 120px;
+            }
+ 
+            .barra {
+                margin-left: 0;
+                text-align: left;
+                width: 100%;
+            }
+ 
+            header nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+ 
+            header nav ul li {
+                margin-right: 0;
+            }
+        }
+ 
+        @media screen and (max-width: 480px) {
+            header img {
+                height: 60px;
+                width: 90px;
+            }
+ 
+            header nav ul {
+                flex-direction: column;
+                gap: 5px;
+            }
+ 
+            header nav ul li {
+                margin-right: 0;
+            }
+ 
+            .carro {
+                width: 100%;
+            }
+        }
+ 
+       /* Estilos para o rodapé */
+       footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,33 +156,19 @@ $carros = $carrosDAO->getAll();
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.php">Home</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <!-- Outros itens de menu podem ser adicionados aqui -->
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Item de Logout corrigido -->
-                        <li class="nav-item">
-                            <form method="post" action="logout.php">
-                                <input type="hidden" name="type" value="logout">
-                                <button class="btn btn-link nav-link" type="submit" style="display: inline; border: none; background: none; padding: 0; cursor: pointer;">Logout</button>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+
+<header>
+        <a href="index.html"><img src="imagem/LogoOficial.png" alt="Logo"></a>
+        <div class="barra">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <div class="container">
@@ -78,6 +202,11 @@ $carros = $carrosDAO->getAll();
         </div>
     </div>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+    <footer>
+        <p>&copy; 2024 Loja de automóveis NBPR. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
 
