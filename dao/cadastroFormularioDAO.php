@@ -60,13 +60,13 @@ class cadastroFormularioDAO {
                 $celular = $celular->getCelular();
                 $email = $email->getEmail();
                 $cidade = $cidade->getCidade();
-                $estado = $estado->getEstado();
+                $uf = $uf->getEstado();
 
                 $stmt->bindParam(':nome', $nome);
                 $stmt->bindParam(':celular', $celular);
                 $stmt->bindParam(':email', $email); 
                 $stmt->bindParam(':cidade', $cidade);
-                $stmt->bindParam(':estado', $estado);
+                $stmt->bindParam(':estado', $uf);
 
                 return true;
             } catch(PDOException $e) {
@@ -84,14 +84,14 @@ class cadastroFormularioDAO {
                 $celular = $formulario->getCelular();
                 $email = $formulario->getEmail();
                 $cidade = $formulario->getCidade();
-                $estado = $formulario->getEstado();
+                $uf = $formulario->getEstado();
 
 
                 $stmt->bindParam(':nome', $nome);
                 $stmt->bindParam(':celular', $celular);
                 $stmt->bindParam(':email', $email);
                 $stmt->bindParam(':cidade', $cidade);
-                $stmt->bindParam(':estado', $estado);
+                $stmt->bindParam(':estado', $uf);
 
                 return true;
                 } catch(PDOException $e) {
