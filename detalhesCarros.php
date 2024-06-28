@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     <div class="form-group">
                         <label for="imagemveiculo">Imagem do veículo</label>
-                        <input type="url" class="form-control" id="imagemveiculo" name="imagemveiculo" value="<?php echo $carro ? $carro->getImagem() : '' ?>">
+                        <input type="text" class="form-control" id="imagemveiculo" name="imagemveiculo" value="<?php echo $carro ? $carro->getImagem() : '' ?>">
                     </div>
 
                     <div class="form-group">
