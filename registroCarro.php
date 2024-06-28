@@ -2,7 +2,6 @@
 
 include_once 'dao/cadastroCarroDAO.php';
 include_once 'entity/cadastroCarros.php';
-include_once 'header.php';
 
 $carrosDAO = new CarrosDAO();
 $carro = null;
@@ -72,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     <div class="form-group">
                         <label for="imagemveiculo">Imagem do veículo</label>
-                        <input type="file" class="form-control" id="imagemveiculo" name="imagemveiculo" value="<?php echo $carro ? $carro->setImagem($imagem_carro) : '' ?>">
+                        <input type="url" class="form-control" id="imagemveiculo" name="imagemveiculo" value="<?php echo $carro ? $carro->setImagem($imagem_carro) : '' ?>">
                     </div>
 
                     <div class="form-group">
