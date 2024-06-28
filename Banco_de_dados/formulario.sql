@@ -7,7 +7,7 @@ id INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(50),
 email VARCHAR(50),
 celular VARCHAR(50),
+cidade VARCHAR(30),
 estado VARCHAR(2),
-cidade VARCHAR(30)
 
 );

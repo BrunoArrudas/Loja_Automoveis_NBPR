@@ -71,4 +71,5 @@ class Carros
     public function setInformacao($informacao) { $this->informacao = $informacao; }
     public function setEmail($email) { $this->email = $email; }
     public function setTelefone($telefone) { $this->telefone = $telefone; }
+
 }
