@@ -1,0 +1,32 @@
+<?php
+
+include_once 'header.php';
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    
+</head>
+<body>
+    <main>
+        <section class="about">
+            <h1>A Empresa</h1>
+            <p>Somos uma empresa apaixonada por carros, comprometida em oferecer aos nossos clientes uma experiência excepcional. Com uma ampla seleção de veículos novos.</p>
+            <h2>Por que Escolher a NBPR?</h2>
+            <ul>
+                <li>Compromisso com a Qualidade: Priorizamos a qualidade em tudo o que fazemos.</li>
+                <li>Atendimento ao Cliente Excepcional: Nosso objetivo é superar as expectativas dos nossos clientes, oferecendo um atendimento personalizado e amigável em todos os momentos.</li>
+                <li>Transparência e Integridade: Valorizamos a transparência e a honestidade em todas as nossas transações, garantindo que você tenha uma experiência de compra tranquila e sem surpresas desagradáveis.</li>
+            </ul>
+            <h2>Junte-se a Nós:</h2>
+            <p>Venha fazer parte da empresa "Automoveis_NBPR" e descubra uma nova maneira de comprar, manter e desfrutar do seu carro. Estamos ansiosos para atendê-lo!</p>
+        </section>
+    </main>
+    
+</body>
+</html>
