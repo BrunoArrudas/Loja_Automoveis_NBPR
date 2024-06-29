@@ -1,35 +1,15 @@
+<!-- Footer -->
+<footer class="text-center">
+    <div class="container">
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#">Sobre Nós</a>
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
+      </div>
+      <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
-
-
-<style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
-
-</style>
-
-<footer>
-    <p>&copy; 2024 Loja Automoveis NBPR . Todos os direitos reservados.</p>
-</footer>
-
-
+  <!-- Incluindo o JavaScript do Bootstrap para funcionalidades opcionais -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
