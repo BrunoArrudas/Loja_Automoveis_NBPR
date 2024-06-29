@@ -1,41 +1,42 @@
 <?php
 
-include_once 'dao/cadastroFormularioDAO.php';
+include_once 'dao/formularioDAO.php';
 include_once 'entity/cadastroFormulario.php';
+include_once 'header.php';
 
-$formulariosDAO = new cadastroFormularioDAO ();
-$formulario = null;
+$formulariosDAO = new formularioDAO();
+$formularios = null;
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
-    $formulario  = $formulariosDAO->getById($_GET['id']);
+    $formularios  = $formulariosDAO->getById($_GET['id']);
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['save'])) {
         if (isset($_POST['id']) && !empty($_POST['id'])) {
-            $formulario = $formulariosDAO->getById($_POST['id']);
-            if ($formulario) {
-                $formulario->setNome($_POST['nome']);
-                $formulario->setEmail($_POST['email']);
-                $formulario->setCelular($_POST['celular']);
-                $formulario->setCidade($_POST['cidade']);
-                $formulario->setUF($_POST['estado']);
+            $formularios = $formulariosDAO->getById($_POST['id']);
+            if ($formularios) {
+                $formularios->setNomeFormulario($_POST['nome']);
+                $formularios->setEmailFormulario($_POST['email']);
+                $formularios->setCelularFormulario($_POST['celular']);
+                $formularios->setCidadeFormulario($_POST['cidade']);
+                $formularios->setEstadoFormulario($_POST['estado']);
                 
-                $formulariosDAO->update($formulario);
+                
+                $formulariosDAO->update($formularios);
             }
         } else {
-            $novoFormulario = new cadastroFormulario(
-                null, $_POST['nome'], $_POST['celular'], $_POST['email'], $_POST['Cidade'], 
-                $_POST['estado'] );
+            $novoFormulario = new Formulario(
+                null, $_POST['nome'], $_POST['email'], $_POST['celular'], $_POST['cidade'], $_POST['estado']);
             
             $formulariosDAO->create($novoFormulario);
         }
         
-        header('Location: index.php');
+        header('Location: detalhesForms.php');
         exit;
     } elseif (isset($_POST['delete']) && isset($_POST['id'])) {
         $formulariosDAO->delete($_POST['id']);
-        header('Location: index.php');
+        header('Location: detalhesForms.php');
         exit;
     }
 }
@@ -46,43 +47,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Formulario de Interesse</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="my-4">Cadastre seu interesse em um de nossos veiculos!</h1>
+        <h1 class="my-4">Tem interesse em algum carro? Envie nos suas Informacoes</h1>
         <form action="registroFormulario.php" method="POST">
-            <input type="hidden" name="id" value="<?php echo $formulario ? $formulario->getId() : '' ?>">
+            <input type="hidden" name="id" value="<?php echo $formularios ? $formularios->getId() : '' ?>">
             <div class="card">
                 <div class="card-body">
 
                     <div class="form-group">
                         <label for="nome">Nome</label>
-                        <input type="text" class="form-control" id="nome" name="nome" value="<?php echo $formulario ? $formulario->setNome($nome) : '' ?>">
+                        <input type="text" class="form-control" id="nome" name="nome" value="<?php echo $formularios ? $formularios->setNomeFormulario($nomeFormulario) : '' ?>">
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="text" class="form-control" id="email" name="email" value="<?php echo $formulario ? $formulario->setEmail($email) : '' ?>" required>
+                        <label for="email">Qual o seu e-mail?</label>
+                        <input type="text" class="form-control" id="email" name="email" value="<?php echo $formularios ? $formularios->setEmailFormulario($emailFormulario) : '' ?>" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="celular">Celular</label>
-                        <input type="text" class="form-control" id="celular" name="celular" value="<?php echo $formulario ? $formulario->setCelular($celular) : '' ?>" required>
+                        <label for="celular">Qual seu celular?</label>
+                        <input type="text" class="form-control" id="celular" name="celular" value="<?php echo $formularios ? $formularios->setCelularFormulario($celularFormulario) : '' ?>" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="Cidade">Cidade</label>
-                        <input type="text" class="form-control" id="Cidade" name="Cidade" value="<?php echo $formulario ? $formulario->setCidade($cidade) : '' ?>" required>
+                        <label for="cidade">Qual sua cidade?</label>
+                        <input type="text" class="form-control" id="cidade" name="cidade" value="<?php echo $formularios ? $formularios->setCidadeFormulario($cidadeFormulario) : '' ?>" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="uf">UF</label>
-                        <input type="text" class="form-control" id="uf" name="uf" value="<?php echo $formulario ? $formulario->setUF($uf) : '' ?>" required>
+                        <label for="estado">Qual seu estado?</label>
+                        <input type="text" class="form-control" id="estado" name="estado" value="<?php echo $formularios ? $formularios->setEstadoFormulario($estadoFormulario) : '' ?>" required>
                     </div>
 
-                   
                     <button type="submit" name="save" class="btn btn-success">Salvar</button>
                     <button type="submit" name="delete" class="btn btn-danger">Excluir</button>
                     <a href="index.php" class="btn btn-secondary">Voltar</a>

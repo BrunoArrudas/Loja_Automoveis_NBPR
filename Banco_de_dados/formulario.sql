@@ -2,7 +2,7 @@ CREATE DATABASE loja_nbpr
 
 USE loja_nbpr
 
-CREATE TABLE IF NOT EXISTS tbl_formularios (
+CREATE TABLE IF NOT EXISTS tbl_formulario (
 id INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(50),
 email VARCHAR(50),

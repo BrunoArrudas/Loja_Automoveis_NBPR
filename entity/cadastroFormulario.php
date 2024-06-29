@@ -1,38 +1,38 @@
 <?php
 
-class cadastroformulario
+class Formulario
 {
     private $id;
-    private $nome;
-    private $email;
-    private $celular;
-    private $cidade;
-    private $uf;
+    private $nomeFormulario;
+    private $emailFormulario;
+    private $celularFormulario;
+    private $cidadeFormulario;
+    private $estadoFormulario;
+   
 
-    public function __construct($id, $nome, $email, $celular, $cidade, $uf)
+    public function __construct($id, $nomeFormulario, $emailFormulario, $celularFormulario, $cidadeFormulario, $estadoFormulario)
     {
         $this->id = $id;
-        $this->nome = $nome;
-        $this->email = $email;
-        $this->celular = $celular;
-        $this->cidade = $cidade;
-        $this->uf = $uf;
-}
+        $this->nomeFormulario = $nomeFormulario;
+        $this->celularFormulario = $celularFormulario;
+        $this->emailFormulario = $emailFormulario;
+        $this->cidadeFormulario = $cidadeFormulario;
+        $this->estadoFormulario = $estadoFormulario;
+    }
 
+    
     public function getId() { return $this->id; }
-    public function getNome() {return $this->nome;}
-    public function getEmail() {return $this->email;}
-    public function getCelular() {return $this->celular;}
-    public function getCidade() {return $this->cidade;}
-    public function getUf() {return $this->uf;}
+    public function getNomeFormulario() { return $this->nomeFormulario; }
+    public function getEmailFormulario() { return $this->emailFormulario; }
+    public function getCelularFormulario() { return $this->celularFormulario; }
+    public function getCidadeFormulario() { return $this->cidadeFormulario; }
+    public function getEstadoFormulario() { return $this->estadoFormulario; }
 
+    
+    public function setNomeFormulario($nomeFormulario) { $this->nomeFormulario = $nomeFormulario; }
+    public function setEmailFormulario($emailFormulario) { $this->emailFormulario = $emailFormulario; }
+    public function setCelularFormulario($celularFormulario) { $this->celularFormulario = $celularFormulario; }
+    public function setCidadeFormulario($cidadeFormulario) { $this->cidadeFormulario = $cidadeFormulario; }
+    public function setEstadoFormulario($estadoFormulario) { $this->$estadoFormulario = $estadoFormulario; }
 
-
-   public function setId($id) { $this->id = $id; }
-   public function setNome($nome) { $this->nome = $nome; }
-   public function setEmail($email) { $this->email = $email; }
-   public function setCelular($celular) { $this->celular = $celular;}
-   public function setCidade($cidade) { $this->cidade = $cidade; }
-   public function setUf($uf) { $this->uf = $uf; }
 }
-?>
