@@ -69,6 +69,11 @@
     .contact-list li {
       margin-bottom: 10px;
     }
+
+    .centralizar {
+      text-align: center;
+      margin-top: 5rem;
+    }
   </style>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -77,7 +82,7 @@
 
   <div class="navbar">
     <a href="index.php">
-    <img src="imagem/LogoOficial.png" width="150px" id="imglogo">
+      <img src="imagem/LogoOficial.png" width="150px" id="imglogo">
     </a>
     <ul>
       <li><a class="active" href="index.php">Home</a></li>
