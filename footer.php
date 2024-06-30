@@ -2,10 +2,9 @@
 <footer class="text-center">
     <div class="container">
       <div class="footer-links">
-        <a href="#">Home</a>
-        <a href="#">Sobre Nós</a>
-        <a href="#">Serviços</a>
-        <a href="#">Contato</a>
+        <a href="index.php">Home</a>
+        <a href="sobre.php">Sobre Nós</a>
+        <a href="contato.php">Contato</a>
       </div>
       <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
     </div>
