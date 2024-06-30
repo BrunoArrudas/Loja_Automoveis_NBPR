@@ -76,7 +76,9 @@
 <body>
 
   <div class="navbar">
+    <a href="index.php">
     <img src="imagem/LogoOficial.png" width="150px" id="imglogo">
+    </a>
     <ul>
       <li><a class="active" href="index.php">Home</a></li>
       <li><a href="registroCarro.php">Quero registrar meu Carro</a></li>
