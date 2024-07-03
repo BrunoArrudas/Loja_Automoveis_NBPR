@@ -39,11 +39,15 @@
       background-color: #111;
     }
 
+    .container {
+      min-height: 100vh;
+    }
+
     footer {
       background-color: #333;
       color: white;
       padding: 8px 0;
-      position: absolute;
+      margin-top: 15px;
       bottom: 0;
       width: 100%;
       height: 70px;

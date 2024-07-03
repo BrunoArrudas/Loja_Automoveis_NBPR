@@ -5,7 +5,7 @@ include_once 'header.php';
 ?>
 
 
-    <main>
+    <main class="container">
         <section class="about">
             <h1>A Empresa</h1>
             <p>Somos uma empresa apaixonada por carros, comprometida em oferecer aos nossos clientes uma experiência excepcional. Com uma ampla seleção de veículos novos.</p>

@@ -2,7 +2,7 @@
 include_once 'header.php';
 ?>
 
-<main>
+<main class="container">
     <section class="about contact-list">
         <h1>Fale Conosco</h1>
         <p>Ainda precisa de ajuda? Entre em contato por um de nossos canais</p>
