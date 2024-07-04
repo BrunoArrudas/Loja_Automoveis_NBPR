@@ -18,7 +18,6 @@ include_once 'header.php';
                 <li>Transparência e Integridade: Valorizamos a transparência e a honestidade em todas as nossas transações, garantindo que você tenha uma experiência de compra tranquila e sem surpresas desagradáveis.</li>
             </ul>
             <h2>Junte-se a Nós:</h2>
-<<<<<<< HEAD
             <p>Venha fazer parte da empresa "Automoveis_NBPR" e descubra uma nova maneira de comprar, manter e desfrutar do seu carro. Estamos ansiosos para atendê-lo!</p>
 
             <?php
@@ -50,12 +49,6 @@ include_once 'header.php';
 <?php
 include_once 'footer.php';
 ?>
-=======
-            <p>Venha fazer parte da empresa "Loja de Automoveis NBPR" e descubra uma nova maneira de comprar, manter e desfrutar do seu carro. Estamos ansiosos para atendê-lo!</p>
-
-
-
->>>>>>> 23d92ce4a85dc680b1b4c12383b963efec0f50ad
         </section>
     </main>
     
@@ -64,11 +57,8 @@ include_once 'footer.php';
 
 <?php
 
-<<<<<<< HEAD
-=======
 
 
 include_once 'footer.php';
 
->>>>>>> 23d92ce4a85dc680b1b4c12383b963efec0f50ad
 ?>

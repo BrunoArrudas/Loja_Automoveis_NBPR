@@ -120,13 +120,14 @@ class CarrosDAO {
     public function update($carro) {
         try {
             $sql = "UPDATE info_carros SET imagem_carro = :imagem_carro, 
-    modelo_carro = :modelo_carro, ano = :ano,cidade = :cidade, kilometragem = :kilometragem,
-    motorizacao = :motorizacao, cambio = :cambio, carroceria = :carroceria, combustivel = :combustivel,
-    cor = :cor, descricao = :descricao_opcionais, informacao = :informacao, email = :email,
-    telefone = :telefone WHERE id = :id";
+                modelo_carro = :modelo_carro, ano = :ano,cidade = :cidade, kilometragem = :kilometragem,
+                motorizacao = :motorizacao, cambio = :cambio, carroceria = :carroceria, combustivel = :combustivel,
+                cor = :cor, descricao_opcionais = :descricao_opcionais, informacao = :informacao, email = :email,
+                telefone = :telefone WHERE id = :id";
 
             $stmt = $this->db->prepare($sql);
 
+            $id = $carro->getId();
             $imagem_carro = $carro->getImagem();
             $modelo_carro = $carro->getModelo();
             $ano = $carro->getAno();
@@ -143,6 +144,7 @@ class CarrosDAO {
             $telefone = $carro->getTelefone();
             
 
+            $stmt->bindParam(':id', $id);
             $stmt->bindParam(':imagem_carro', $imagem_carro);
             $stmt->bindParam(':modelo_carro', $modelo_carro);
             $stmt->bindParam(':ano', $ano);
