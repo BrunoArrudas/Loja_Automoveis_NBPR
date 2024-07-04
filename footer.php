@@ -2,7 +2,7 @@
 <footer class="text-center">
     
       </div>
-      <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
+      <p>&copy; 2024 Loja de Automoveis NBPR. Todos os direitos reservados.</p>
     </div>
   </footer>
 
