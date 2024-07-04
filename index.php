@@ -11,7 +11,7 @@ $carros = $carrosDAO->getAll();
 
     <div class="container">
         <h1 class="my-4">Automóveis</h1>
-        <a href="registroCarro.php" class="btn btn-primary mb-4">Quero cadastrar meu automóvel</a>
+        <a href="registroCarro.php" id="btn" class="btn btn-primary mb-4">Quero cadastrar meu automóvel</a>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <?php foreach ($carros as $carro) : ?>
                 <div class="col">
@@ -43,6 +43,32 @@ $carros = $carrosDAO->getAll();
 
 </body>
 </html>
+
+<style> 
+
+body{
+    background-color: whitesmoke;
+}
+.btn{
+    background-color: #d80000;
+    border-radius: 10px;
+    border-color: goldenrod;
+}
+
+.card-text{
+    border: 3px solid black;
+    border-radius: 10px;
+    border-color: whitesmoke;
+}
+
+.col{
+    border-color: (221, 220, 220);
+}
+
+
+
+
+</style>
 
 <?php
 

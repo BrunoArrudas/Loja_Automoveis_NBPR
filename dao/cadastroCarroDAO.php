@@ -128,7 +128,7 @@ class CarrosDAO {
             $stmt = $this->db->prepare($sql);
 
             $imagem_carro = $carro->getImagem();
-            $modelo_carro = $carro->getModeloCarro();
+            $modelo_carro = $carro->getModelo();
             $ano = $carro->getAno();
             $cidade = $carro->getCidade();
             $kilometragem = $carro->getKilometragem();

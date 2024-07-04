@@ -130,15 +130,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <input type="tel" class="form-control" id="Telefone" name="Telefone" value="<?php echo $carro ? $carro->setTelefone($telefone) : '' ?>" required>
                     </div>
 
-                    <button type="submit" name="save" class="btn btn-success">Salvar</button>
-                    <button type="submit" name="delete" class="btn btn-danger">Excluir</button>
-                    <a href="index.php" class="btn btn-secondary">Voltar</a>
+                    <button type="submit" name="save" id="saver" class="btn btn-success">Salvar</button>
+                    <button type="submit" name="delete" id= "deleter"class="btn btn-danger">Excluir</button>
+                    <a href="index.php" id= "volter" class="btn btn-secondary">Voltar</a>
                 </div>
             </div>
         </form>
     </div>
 </body>
 </html>
+
+<style> 
+
+body{
+    background-color: whitesmoke;
+}
+
+.container{
+    background-color: red;
+    border-radius: 20px;
+    height: 1380px;
+    width: 1300px;
+}
+#saver{
+    background-color: green;
+    border-radius: 10px;
+    border-color: goldenrod;
+}
+
+#deleter{
+    background-color: red;
+    border-radius: 10px;
+    border-color: goldenrod;
+}
+
+#volter{
+    background-color: goldenrod;
+    border-radius: 10px;
+    border-color: goldenrod;
+}
+
+
+
+
+</style>
 
 <?php
 
