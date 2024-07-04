@@ -20,10 +20,6 @@ include_once 'header.php';
             <h2>Junte-se a Nós:</h2>
             <p>Venha fazer parte da empresa "Automoveis_NBPR" e descubra uma nova maneira de comprar, manter e desfrutar do seu carro. Estamos ansiosos para atendê-lo!</p>
 
-            <?php
-include_once 'header.php';
-?>
-
 
         <h2>Missão</h2>
         <p>Nossa missão é proporcionar aos nossos clientes uma experiência de compra de veículos sem igual, oferecendo uma ampla gama de automóveis de alta qualidade e serviços excepcionais, sempre com integridade, transparência e foco no atendimento ao cliente.</p>
@@ -53,12 +49,16 @@ include_once 'footer.php';
     </main>
     
 </body>
+
+<style> 
+
+body{
+    background-color: whitesmoke;
+}
+.container{
+    border-radius: 20px;
+    margin-top: 80px;
+}
+
+</style>
 </html>
-
-<?php
-
-
-
-include_once 'footer.php';
-
-?>

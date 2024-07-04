@@ -16,11 +16,31 @@ include_once 'header.php';
                 <label for="senha">Senha:</label>
                 <input type="password" id="senha" name="senha" required><br><br>
 
-                <input type="submit" value="Cadastrar">
+                <input id="saver" type="submit" value="Cadastrar">
             </form>
         </div>
     </div>
 </div>
+
+<style> 
+
+body{
+    background-color: whitesmoke;
+}
+
+.form-wrapper{
+    background-color: red;
+    border-radius: 20px;
+    width: 500px;
+    height: 600px;
+}
+#saver{
+    background-color: green;
+    border-radius: 10px;
+    border-color: goldenrod;
+}
+
+</style>
 
 <?php
 include_once 'footer.php';

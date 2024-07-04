@@ -2,6 +2,7 @@
 
 include_once 'dao/cadastroCarroDAO.php';
 include_once 'entity/cadastroCarros.php';
+include_once 'header.php';
 
 $carrosDAO = new CarrosDAO();
 $carro = null;
@@ -150,3 +151,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </body>
 </html>
+<?php
+
+include_once 'footer.php';
+
+?>
