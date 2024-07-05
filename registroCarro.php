@@ -159,7 +159,7 @@ body{
 }
 
 #deleter{
-    background-color: red;
+    background-color: grey;
     border-radius: 10px;
     border-color: goldenrod;
 }

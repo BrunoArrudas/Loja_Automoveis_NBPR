@@ -47,7 +47,7 @@ include_once 'header.php';
         <br>
 
         
-        <img src="imagem/fachada.webp" height = 400 >
+        <img src="imagem/loja1.jpeg" height = 290 width = 580 >
 
         
     </section>
