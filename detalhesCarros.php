@@ -2,6 +2,7 @@
 
 include_once 'dao/cadastroCarroDAO.php';
 include_once 'entity/cadastroCarros.php';
+include_once 'header.php';
 
 $carrosDAO = new CarrosDAO();
 $carro = null;
@@ -15,6 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($_POST['id']) && !empty($_POST['id'])) {
             $carro = $carrosDAO->getById($_POST['id']);
             if ($carro) {
+
+                $carro->setId($_POST['id']);
                 $carro->setImagem($_POST['imagemveiculo']);
                 $carro->setModelo($_POST['modelo']);
                 $carro->setAno($_POST['Ano']);
@@ -25,10 +28,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $carro->setCarroceria($_POST['Carroceria']);
                 $carro->setCombustivel($_POST['Combustivel']);
                 $carro->setCor($_POST['Cor']);
-                $carro->setDescricao($_POST['Descricao']);
+                $carro->setDescricao($_POST['Descricao_opcionais']);
                 $carro->setInformacao($_POST['Informacoes']);
                 $carro->setEmail($_POST['email']);
-                $carro->setTelefone($_POST['Telefone']);
+                $carro->setTelefone($_POST['Telefone']);                
                 
                 $carrosDAO->update($carro);
             }
@@ -36,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $novoCarro = new Carros(
                 null, $_POST['imagemveiculo'], $_POST['modelo'], $_POST['Ano'], $_POST['Cidade'], 
                 $_POST['Kilometragem'], $_POST['Motorizacao'], $_POST['Cambio'], $_POST['Carroceria'], 
-                $_POST['Combustivel'], $_POST['Cor'], $_POST['Descricao'], $_POST['Informacoes'], 
+                $_POST['Combustivel'], $_POST['Cor'], $_POST['Descricao_opcionais'], $_POST['Informacoes'], 
                 $_POST['email'], $_POST['Telefone']
             );
             
@@ -148,3 +151,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </body>
 </html>
+<?php
+
+include_once 'footer.php';
+
+?>

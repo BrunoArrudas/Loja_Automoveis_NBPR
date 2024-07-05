@@ -146,6 +146,10 @@ body{
     background-color: whitesmoke;
 }
 
+.my-4{
+    color: whitesmoke;
+}
+
 .container{
     background-color: red;
     border-radius: 20px;

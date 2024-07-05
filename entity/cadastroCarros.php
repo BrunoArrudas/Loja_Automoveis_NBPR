@@ -56,7 +56,8 @@ class Carros
     public function getEmail() { return $this->email; }
     public function getTelefone() { return $this->telefone; }
 
-    
+
+    public function setId($id) { $this->id = $id; }
     public function setImagem($imagem_carro) { $this->imagem_carro = $imagem_carro; }
     public function setModelo($modelo_carro) { $this->modelo_carro = $modelo_carro; }
     public function setAno($ano) { $this->ano = $ano; }
